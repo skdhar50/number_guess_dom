@@ -13,9 +13,15 @@
 		/>
 		<link rel="stylesheet" href="./styles/output.css" />
 		<title>Guess the number</title>
+
+		<style>
+			body {
+				background-image: url("./images/bg.png");
+			}
+		</style>
 	</head>
 	<body
-		class="bg-[url('/images/bg.png')] px-2 bg-no-repeat h-screen bg-cover flex justify-center items-center"
+		class="px-2 bg-no-repeat h-screen bg-cover flex justify-center items-center"
 	>
 		<div
 			class="bg-white bg-opacity-80 md:w-3/4 lg:w-2/4 p-6 drop-shadow-md flex flex-col justify-center items-center space-y-6"
@@ -66,9 +72,7 @@
 
 			<!-- Hint message -->
 			<div class="hints hidden">
-				<p class="text-lg text-gray-500 font-mainfont hint_msg">
-					
-				</p>
+				<p class="text-lg text-gray-500 font-mainfont hint_msg"></p>
 			</div>
 
 			<!-- Number form -->
