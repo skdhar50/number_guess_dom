@@ -28,19 +28,23 @@
 			<!-- Sub heading -->
 			<div class="border-2 border-gray-400 md:w-3/4">
 				<p class="p-2 text-center text-gray-700">
-					We have a hidden number between 1 to 20. Can you Guess it?
+					We have a hidden number between 1 to 10. Can you Guess it?
 				</p>
 			</div>
 
 			<!-- Chances -->
 			<div class="">
-				<p class="hidden font-mainfont text-gray-600 text-xl md:text-2xl">
-					You have <span class="text-[#AD5708] text-4xl px-2">3</span> Chances
+				<p
+					class="chance_message font-mainfont text-gray-600 text-xl md:text-2xl"
+				>
+					You have
+					<span class="chances_left text-[#AD5708] text-4xl px-2">3</span>
+					Chances
 				</p>
 			</div>
 
 			<!-- Wining message -->
-			<div class="space-y-3 hidden">
+			<div class="success space-y-3 hidden">
 				<img src="/images/win.svg" alt="" class="" />
 				<p class="text-[#0B9444] text-xl md:text-3xl font-mainfont">
 					The number is Correct
@@ -48,34 +52,37 @@
 			</div>
 
 			<!-- Lose message -->
-			<div class="flex flex-col items-center space-y-2">
-				<p class="text-[#E7454C] text-5xl font-mainfont drop-shadow-sm">
-					Sorry
-				</p>
-				<img src="/images/lose.png" alt="" class="aspect-square w-[90px]" />
-				<p class="text-[#EF474E] text-4xl font-mainfont drop-shadow-sm">
-					You Lose
-				</p>
+			<div class="hidden failed">
+				<div class="flex flex-col items-center space-y-2">
+					<p class="text-[#E7454C] text-5xl font-mainfont drop-shadow-sm">
+						Sorry
+					</p>
+					<img src="/images/lose.png" alt="" class="aspect-square w-[90px]" />
+					<p class="text-[#EF474E] text-4xl font-mainfont drop-shadow-sm">
+						You Lose
+					</p>
+				</div>
 			</div>
 
 			<!-- Hint message -->
-			<div class="">
-				<p class="hidden text-lg text-gray-500 font-mainfont">
-					Your guess is smaller
+			<div class="hints hidden">
+				<p class="text-lg text-gray-500 font-mainfont hint_msg">
+					
 				</p>
 			</div>
 
 			<!-- Number form -->
-			<div class="hidden">
+			<div class="input_form">
 				<div class="flex flex-col space-y-4">
 					<input
 						type="number"
-						name=""
-						id=""
+						name="number"
+						id="number"
 						class="py-4 text-xl w-[140px] focus:border-[#7A5E9B] focus:ring-[#7A5E9B]"
 					/>
 					<button
-						class="px-4 py-2 bg-[#7A5E9B] text-white text-lg font-medium hover:bg-opacity-80"
+						type="button"
+						class="enter_btn px-4 py-2 bg-[#7A5E9B] text-white text-lg font-medium hover:bg-opacity-80"
 					>
 						Enter
 					</button>
@@ -84,10 +91,13 @@
 
 			<!-- Reset button -->
 			<button
-				class="px-4 py-2 bg-[#7A5E9B] text-white text-lg font-medium hover:bg-opacity-80"
+				type="button"
+				class="reset_btn hidden px-4 py-2 bg-[#7A5E9B] text-white text-lg font-medium hover:bg-opacity-80"
 			>
 				Play Again
 			</button>
 		</div>
+
+		<script src="/scripts/script.js" type="text/javascript"></script>
 	</body>
 </html>
