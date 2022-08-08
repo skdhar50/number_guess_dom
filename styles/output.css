@@ -811,6 +811,10 @@ select {
   background-image: url('./images/bg.png');
 }
 
+.bg-\[url\(\'images\/bg\.png\'\)\] {
+  background-image: url('images/bg.png');
+}
+
 .bg-cover {
   background-size: cover;
 }
